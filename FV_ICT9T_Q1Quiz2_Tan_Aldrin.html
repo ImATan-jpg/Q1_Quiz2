@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jujutsu Kaisen Zero</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            position: relative;
+            overflow: hidden; 
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(https://i0.wp.com/blushinggeek.com/wp-content/uploads/2022/07/anime-movie-review-jujutsu-kaisen-0-blushinggeek.jpg?w=974&ssl=1) no-repeat center center;
+            background-size: cover;
+            opacity: 0.3; 
+            z-index: -1; 
+        }
+
+        .content-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%; 
+            max-width: 1200px; 
+            height: 100%; 
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box; 
+            overflow: auto; 
+            border: 2px solid red; 
+        }
+
+        .story-box {
+            width: 100%; 
+            background-color: red;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            font-weight: bold;
+            font-size: 24px; 
+            padding: 10px 0;
+            border: 2px solid darkred;
+            text-transform: uppercase;
+        }
+
+        .paragraph {
+            margin: 20px 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .paragraph-highlight {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .content img {
+            margin: 20px 0;
+            display: block;
+            max-width: 100%;
+            border: 2px solid red;
+        }
+
+        .characters-section {
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .character-box {
+            position: relative;
+            width: 100%; 
+            padding-top: 100%; 
+            overflow: hidden; 
+        }
+
+        .character-box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+        }
+
+        .character-name {
+            background-color: transparent;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-shadow: 1px 1px 2px lightyellow; 
+            box-sizing: border-box;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.7); 
+            readability */
+        }
+
+        .more-characters {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .more-characters a {
+            color: blue;
+            text-decoration: underline;
+            cursor: ;
+        }
+
+        .gif-separator {
+            border-top: 2px solid red; 
+            margin: 10px 0; 
+        }
+
+        .gifs-section {
+            display: flex;
+            margin-top: 20px;
+            gap: 20px; 
+            flex-wrap: wrap; 
+        }
+
+        .gif-list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 45%; 
+        }
+
+        .gif-item {
+            border: 2px solid red; 
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px; 
+        }
+
+        .gif-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover; 
+        }
+
+        .gif-text-container {
+            width: 100%;
+            max-width: 45%; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .gif-text-box {
+            border: 2px solid red; 
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .gif-text {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        #reset{
+                border-radius: 10px;
+    background-color: white;
+    font-size: 13px;
+    cursor:pointer;
+}
+#submit{
+    border-radius: 10px;
+    background-color: white;
+    font-size: 13px;
+    cursor:pointer;
+}
+.FormContainer{     
+    background-color:##dbd9d9;
+    width: 308px;
+    padding: 20px;
+    Margin:auto;
+    opacity: 0.9;
+    box-shadow:2px 2px 15px rgba(0,0,0, 0.8);
+}
+
+    </style>
+</head>
+<body>
+    <div class="content-box">
+        <center>
+            <h1>Welcome to Jujutsu Kaisen Zero</h1>
+            <p>Experience the world of Jujutsu Kaisen.</p>
+            <br>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgL058qXTL2zz8veeHMMYRwc3cn97lUEbaYmJa_5y-ZYCSs7LSlPISXpfKVFIYgUrZpGtcNrxCe33q--eZnObUZROJ6kBpJ3u01zAJyQxPhCCWOWEKVKWYCMW3lKdjWh-Yso65AMknWDTVJMjAMfLzAcPvThyZzybMoAkR4L1SUERLP4VuxiH4bzemPJA/s1124/jujutsu-kaisen-0-poster-sm-cinema-1.png" alt="Jujutsu Kaisen 0 poster" height="350" width="300">
+            <br>
+            <p>This is Jujutsu Kaisen 0, also called JJK.</p>
+            <p>JJK is an animated movie created by MAPPA in December 24, 2021.</p>
+
+            <p class="paragraph">High school student Yuta Okkotsu is bullied and injured by a Cursed Spirit. The Jujutsu Society wishes to have him killed, but Satoru Gojo, a teacher at Tokyo Jujutsu Technical High, recruits him to join the school in November 2016. Yuta explains that the Cursed Spirit is Rika, a childhood friend who died in a freak accident and became an overprotective spirit. Yuta meets fellow students Maki Zen'in, Toge Inumaki, and Panda, each with unique abilities.</p>
+
+            <p class="paragraph">During his first mission with Maki, Yuta summons Rika on his own for the first time. Three months pass, and he grows close to them. One day, a high-level Curse attacks Toge and Yuta, led by Suguru Geto, a former student and old friend of Gojo. Geto declares war to activate a portal to the underworld, releasing a thousand Curses to remove non-sorcerer humans. Gojo realizes this and sends Inumaki and Panda back to protect Yuta and Maki during the night of Geto's attack. Geto overpowers them, leaving only Yuta conscious. Enraged, Yuta promises himself as a sacrifice to Rika to strengthen their bond.</p>
+
+            <p class="paragraph">Gojo confirms that Yuta was the one who inadvertently cursed Rika through unspecified ties to royal bloodlines within Japan's caste system. After breaking the curse, Rika can pass on peacefully after Yuta continues training as a sorcerer within the institution. In a post-credits scene, Geto's former ally Miguel eats lunch with Yuta in Kenya, and Gojo joins them.</p>
+            <br>
+
+            <div class="characters-section">
+                <h1>Characters</h1>
+
+                <div class="character-grid">
+                    <div class="character-box">
+                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/8/89/Maki_Zen%27in_%28Anime_2%29.png/revision/latest?cb=20210526085353" alt="Maki Zen'in">
+                        <div class="character-name">Maki Zen'in</div>
+                    </div>
+
+                    <div class="character-box">
+                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/c/cb/Toge_Inumaki_%28Anime_2%29.png/revision/latest?cb=20240622024715" alt="Toge Inumaki">
+                        <div class="character-name">Toge Inumaki</div>
+                    </div>
+
+                    <div class="character-box">
+                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/5/5e/Yuta_Okkotsu_%28Anime%29.png/revision/latest?cb=20231228170059" alt="Yuta Okkotsu">
+                        <div class="character-name">Yuta Okkotsu</div>
+                    </div>
+
+                    <div class="character-box">
+                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/e/ef/Satoru_Gojo_%28Anime_2%29.png/revision/latest?cb=20240622022211" alt="Satoru Gojo">
+                        <div class="character-name">Satoru Gojo</div>
+                    </div>
+
+                    <div class="character-box">
+                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/b/b0/Kento_Nanami_%28Anime%29.png/revision/latest?cb=20240618014214" alt="Kento Nanami">
+                        <div class="character-name">Kento Nanami</div>
+                    </div>
+
+                    <div class="character-box">
+                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/c/c2/Suguru_Geto_%28Prequel_Anime%29.png/revision/latest?cb=20211104034641" alt="Suguru Geto">
+                        <div class="character-name">Suguru Geto</div>
+                    </div>
+
+                    <div class="character-box">
+                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/e/e3/Rika_Orimoto_%28Anime%29.png/revision/latest?cb=20211104034101" alt="Rika Orimoto">
+                        <div class="character-name">Rika Orimoto</div>
+                    </div>
+                </div>
+
+                <div class="more-characters">
+                    <a href="https://jujutsu-kaisen.fandom.com/wiki/Jujutsu_Kaisen_Wiki">More characters...</a>
+                </div>
+            </div>
+            <br>
+
+            <div class="story-box">Story</div>
+            <br>
+
+            <div class="gifs-section">
+                <div class="gif-list">
+                    <div class="gif-item">
+                        <img src="https://www.icegif.com/wp-content/uploads/2024/01/icegif-1002.gif" alt="GIF 4">
+                    </div>
+                    <div class="gif-item">
+                        <img src="https://64.media.tumblr.com/982fd3d1dbd99431295c46865f35ba66/8b547e40c41de817-a4/s540x810/4c9c6506f937790a8c57615a991ddbce6a20b154.gifv" alt="GIF 5">
+                    </div>
+                    <div class="gif-item">
+                        <img src="https://media1.tenor.com/m/nq3sa_6988gAAAAd/jujutsu-kaisen.gif" alt="GIF 6">
+                    </div>
+                </div>
+
+                <div class="gif-text-container">
+                    <div class="gif-text-box">
+                        <p class="gif-text">Yuta and Rika</p>
+                    </div>
+                    <div class="gif-text-box">
+                        <p class="gif-text">Yuta and Rika fighting Geto</p>
+                    </div>
+                    <div class="gif-text-box">
+                        <p class="gif-text">Nanami helps in battle</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gif-separator"></div>
+
+            <div class="gifs-section">
+                <div class="gif-list">
+                    <div class="gif-item">
+                        <img src="https://64.media.tumblr.com/8a701b859cd129bbf57dc1ac9c24d6f0/60f64685fc3f197a-bc/s540x810/f928e1596f281aa68969a080bb08d88f5a1c769a.gifv" alt="GIF 7">
+                    </div>
+                    <div class="gif-item">
+                        <img src="https://64.media.tumblr.com/d165ace7b5f88a4a7cd47977dde8cf4e/50e216c036667a47-9d/s540x810/1107c6195f4cc8b0909b8e038b6349012b228e69.gifv" alt="GIF 8">
+                    </div>
+                    <div class="gif-item">
+                        <img src="https://64.media.tumblr.com/9ede2316e382ce687fe21a1e679dcb58/50e216c036667a47-87/s540x810/f8c8ae42d15c1e2b826cbb639533ff60e951b087.gifv" alt="GIF 9">
+                    </div>
+                </div>
+
+                <div class="gif-text-container">
+                    <div class="gif-text-box">
+                        <p class="gif-text">Inamuki's cursed speech</p>
+                    </div>
+                    <div class="gif-text-box">
+                        <p class="gif-text">Yuta and Maki inside curse</p>
+                    </div>
+                    <div class="gif-text-box">
+                        <p class="gif-text">Panda vs Geto</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+<div class="FormContainer">
+    <form action="">
+<label for="Recomendation"> Recomended Movies:</label><br>
+            <select id="Recomend" name="Recomend">
+            <option value="Recomend">One Piece Film: Red</option>
+            <option value="Recomend">Demon slayer mugen train</option>
+            <option value="Recomend">My hero academia worlds hero mission</option>
+</select>
+<br><br>
+
+<label form="comment"> Leave a Comment: </label>
+<br>
+<textarea rows="5" cols="35" placeholder="Leave a Comment Here"></textarea>
+<br><br>
+
+<label form="comment"> Other Recommendations: </label>
+<br>
+<textarea rows="1" cols="15" placeholder="Move Title"></textarea><br>
+<br>
+<input type="submit" id="submit" name="submit" Value="submit form">
+<input type="reset" id="reset" name="reset" value="Clear all">
+</form>
+</div>
+
+</center>
+</body>
+</html>
